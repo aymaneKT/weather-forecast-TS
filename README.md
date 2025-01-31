@@ -1,81 +1,66 @@
-Weather App
+# Weather App
 
-Description
+## Description
 
 This React application allows users to view weather information for a selected city. It uses the OpenWeather API to fetch real-time weather data and supports language translation (English and Arabic).
 
-Technologies Used
+## Technologies Used
 
-React: JavaScript framework for building the user interface.
+- **React**: JavaScript framework for building the user interface.
+- **Material-UI (MUI)**: UI component library for React.
+- **Axios**: Library for making HTTP requests.
+- **i18next**: Library for managing translations.
+- **OpenWeather API**: Service to obtain weather data.
 
-Material-UI (MUI): UI component library for React.
+## Project Setup
 
-Axios: Library for making HTTP requests.
+### Prerequisites
 
-i18next: Library for managing translations.
+- Installed Node.js
+- An account on [OpenWeather](https://openweathermap.org/) to get an API key.
 
-OpenWeather API: Service to obtain weather data.
+### Installation
 
-Project Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/aymaneKT/weather-forecast-TS.git
+   cd weather-forecast-TS
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure the environment variables:
+   - Create a `.env` file in the project root (outside the `src` folder).
+   - Add the following line with your OpenWeather API Key:
+     ```
+     VITE_WEATHER_API_KEY=your_api_key_here
+     ```
+4. Start the application:
+   ```bash
+   npm run dev
+   ```
 
-Prerequisites
+## Features
 
-Installed Node.js
+- **City Search**: Enter a city name to get weather details.
+- **Automatic Suggestions**: Displays city suggestions based on user input.
+- **Weather Display**: Shows current temperature, minimum, maximum, and weather description.
+- **Multilingual Support**: Switch between English and Arabic.
+- **Real-Time Clock Update**: Local time updates every second.
 
-An account on OpenWeather to get an API key.
+## Libraries and Dependencies
 
-Installation
+- **React**
+- **@mui/material** (Material UI)
+- **axios**
+- **i18next**
 
-Clone the repository:
+## APIs Used
 
-git clone https://github.com/aymaneKT/weather-forecast-TS.git
-cd weather-app
+1. **Weather API**: `https://api.openweathermap.org/data/2.5/weather`
+2. **Geo API**: `https://api.openweathermap.org/geo/1.0/direct`
 
-Install dependencies:
-
-npm install
-
-Configure the environment variables:
-
-Create a .env file in the project root (outside the src folder).
-
-Add the following line with your OpenWeather API Key:
-
-VITE_WEATHER_API_KEY=your_api_key_here
-
-Start the application:
-
-npm run dev
-
-Features
-
-City Search: Enter a city name to get weather details.
-
-Automatic Suggestions: Displays city suggestions based on user input.
-
-Weather Display: Shows current temperature, minimum, maximum, and weather description.
-
-Multilingual Support: Switch between English and Arabic.
-
-Real-Time Clock Update: Local time updates every second.
-
-Libraries and Dependencies
-
-React
-
-@mui/material (Material UI)
-
-axios
-
-i18next
-
-APIs Used
-
-Weather API: https://api.openweathermap.org/data/2.5/weather
-
-Geo API: https://api.openweathermap.org/geo/1.0/direct
-
-Author
+## Author
 
 Aymane Kabti
-
