@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description
 
-Currently, two official plugins are available:
+This React application allows users to view weather information for a selected city. It uses the OpenWeather API to fetch real-time weather data and supports language translation (English and Arabic).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technologies Used
 
-## Expanding the ESLint configuration
+React: JavaScript framework for building the user interface.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Material-UI (MUI): UI component library for React.
 
-- Configure the top-level `parserOptions` property like this:
+Axios: Library for making HTTP requests.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+i18next: Library for managing translations.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+OpenWeather API: Service to obtain weather data.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Project Setup
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Prerequisites
+
+Installed Node.js
+
+An account on OpenWeather to get an API key.
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/aymaneKT/weather-forecast-TS.git
+cd weather-app
+
+Install dependencies:
+
+npm install
+
+Configure the environment variables:
+
+Create a .env file in the project root (outside the src folder).
+
+Add the following line with your OpenWeather API Key:
+
+VITE_WEATHER_API_KEY=your_api_key_here
+
+Start the application:
+
+npm run dev
+
+Features
+
+City Search: Enter a city name to get weather details.
+
+Automatic Suggestions: Displays city suggestions based on user input.
+
+Weather Display: Shows current temperature, minimum, maximum, and weather description.
+
+Multilingual Support: Switch between English and Arabic.
+
+Real-Time Clock Update: Local time updates every second.
+
+Libraries and Dependencies
+
+React
+
+@mui/material (Material UI)
+
+axios
+
+i18next
+
+APIs Used
+
+Weather API: https://api.openweathermap.org/data/2.5/weather
+
+Geo API: https://api.openweathermap.org/geo/1.0/direct
+
+Author
+
+Aymane Kabti
+
